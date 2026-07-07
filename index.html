@@ -1,52 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-
     <meta charset="UTF-8">
-
     <title>Coffee House</title>
-
     <link rel="stylesheet" href="styles.css">
-
 </head>
-
 <body>
 
-<h1>☕ Coffee House</h1>
+    <h1>&#9749; Coffee House</h1>
+    <h2>Nuestro Men&uacute;</h2>
 
-<h2>Nuestro Menú</h2>
+    <div class="producto">
+        <h3>Capuccino</h3>
+        <p>$2500</p>
+        <button onclick="comprar('Capuccino')">Comprar</button>
+    </div>
 
-<div class="producto">
+    <div class="producto">
+        <h3>Latte</h3>
+        <p>$2700</p>
+        <button onclick="comprar('Latte')">Comprar</button>
+    </div>
 
-<h3>Capuccino</h3>
+    <div class="producto">
+        <h3>Espresso</h3>
+        <p>$2000</p>
+        <button onclick="comprar('Espresso')">Comprar</button>
+    </div>
 
-<p>$2500</p>
+    <div class="producto">
+        <h3>Americano</h3>
+        <p>$2200</p>
+        <button onclick="comprar('Americano')">Comprar</button>
+    </div>
 
-<button onclick="comprar('Capuccino')">
+    <div class="producto">
+        <h3>Mocha</h3>
+        <p>$3000</p>
+        <button onclick="comprar('Mocha')">Comprar</button>
+    </div>
 
-Comprar
+    <p id="mensaje"></p>
 
-</button>
-
-</div>
-
-<div class="producto">
-
-<h3>Latte</h3>
-
-<p>$2700</p>
-
-<button onclick="comprar('Latte')">
-
-Comprar
-
-</button>
-
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
-
 </html>
