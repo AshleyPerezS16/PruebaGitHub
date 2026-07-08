@@ -15,8 +15,22 @@ app.UseStaticFiles();
 // Un solo endpoint: recibe el nombre del café y responde con un mensaje
 app.MapPost("/comprar", (Compra compra) =>
 {
+	if (string.IsNullOrWhiteSpace(compra.Cafe))
+        return Results.BadRequest(new { error = "Debe indicar un café." });
+	
     var mensaje = $"¡Gracias por comprar un {compra.Cafe}!";
     return Results.Ok(new { mensaje });
+});
+
+app.MapGet("/menu", () =>
+{
+    var menu = new[]
+    {
+        new { nombre = "Capuccino", precio = 2500 },
+        new { nombre = "Latte", precio = 2700 },
+        new { nombre = "Espresso", precio = 2000 },
+    };
+    return Results.Ok(menu);
 });
 
 app.Run();
