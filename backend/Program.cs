@@ -33,6 +33,8 @@ app.MapGet("/menu", () =>
     return Results.Ok(menu);
 });
 
+app.MapGet("/health", () => Results.Ok(new { estado = "ok" }));
+
 app.Run();
 
 record Compra(string Cafe);
